@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frontend</title>
+</head>
+<body>
+
+  <h1>Frontend</h1>
+  <button onclick="callBackend()">Check Backend</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    async function callBackend() {
+      try {
+        const res = await fetch('/api/');
+        const data = await res.json();
+        document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        document.getElementById("output").textContent = "Error: " + err;
+      }
+    }
+  </script>
+
+</body>
+</html>
