@@ -5,4 +5,4 @@ const server = http.createServer((req, res) => {
   res.end(JSON.stringify({ service: 'backend', status: 'ok' }));
 });
 
-server.listen(3000, () => console.log('Backend running on port 3000'));
+server.listen(3000, () => console.log('Backend running on port 3000','service: backend, status: ok','message: Backend service is running'));
